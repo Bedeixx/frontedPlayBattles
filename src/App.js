@@ -1,6 +1,7 @@
 function App() {
   const loginWithSpotify = () => {
-    window.location.href = 'https://playbattles-f33e38167e8a.herokuapp.com/auth/spotify';
+    window.location.href = 'http://localhost:5000/auth/spotify';
+    //window.location.href = 'https://playbattles-f33e38167e8a.herokuapp.com/auth/spotify';
   };
 
   return (
