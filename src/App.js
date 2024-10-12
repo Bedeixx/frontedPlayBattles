@@ -5,8 +5,9 @@ function App() {
 
   useEffect(() => {
     fetch('https://playbattles-f33e38167e8a.herokuapp.com/')
-      .then(res => res.text())
-      .then(data => setMessage(data));
+    .then(res => res.text())
+    .then(data => setMessage(data))
+    .catch((error) => console.error("Error al obtener datos del backend:", error));
   }, []);
 
   return (
