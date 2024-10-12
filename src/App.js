@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function App() {
+  const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    fetch('https://playbattles-f33e38167e8a.herokuapp.com/')
+      .then(res => res.text())
+      .then(data => setMessage(data));
+  }, []);
+
   return (
     <div>
-      <h1>Frontend funcionando correctamente</h1>
+      <h1>{message}</h1>
     </div>
   );
 }
